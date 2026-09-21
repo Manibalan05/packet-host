@@ -226,7 +226,7 @@ fun ImportScreen(nav: NavController) {
                         label = { Text("Git repo URL (https)") },
                         placeholder = { Text("https://github.com/you/site.git") },
                         supportingText = {
-                            Text("Tip: add #branch to clone a specific branch (e.g. …/portfolio#live).")
+                            Text("Tip: add #branch to clone a specific branch (e.g. …/mysite#live).")
                         },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true,

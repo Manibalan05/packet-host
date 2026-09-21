@@ -13,7 +13,7 @@ Clone a repo → tap **Run** → tap **Host** → get a free public `https://` l
 
 | Feature | Details |
 |---|---|
-| 📦 **Git clone import** | Public repos, private repos (token), plus `#branch` suffix (e.g. `…/portfolio#live`) |
+| 📦 **Git clone import** | Public repos, private repos (token), plus `#branch` suffix (e.g. `…/mysite#live`) |
 | 🔍 **Auto-detect runtime** | Static, Node, Python, PHP (static fully works on-device today) |
 | 🔀 **Reverse proxy** | One entrypoint (`:8080`) routing by Host header / path prefix — Coolify-style |
 | 🌍 **Free public links** | Cloudflare quick tunnels → instant `https://*.trycloudflare.com` |
