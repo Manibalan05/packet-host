@@ -1,0 +1,9 @@
+<resources>
+    <color name="primary">#4F46E5</color>
+    <color name="primary_dark">#4338CA</color>
+    <color name="accent">#0D9488</color>
+    <color name="background">#F5F6FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#DC2626</color>
+    <color name="ic_launcher_background">#4F46E5</color>
+</resources>

@@ -1,0 +1,9 @@
+# Signing identity — never commit release keystores or their passwords.
+*.keystore
+*.jks
+local.properties
+# Build outputs
+build/
+app/build/
+.gradle/
+.kotlin/

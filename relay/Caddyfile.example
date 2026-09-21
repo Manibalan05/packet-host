@@ -1,0 +1,13 @@
+# Alan VPS relay — Caddy front door (example, edit before use)
+#
+# 1. Replace sites.example.com with YOUR domain (DNS A-record -> VPS public IP).
+# 2. Replace 8080 with the remotePort you configured in the Alan Relay screen.
+# 3. Copy to /etc/caddy/Caddyfile and run: sudo systemctl reload caddy
+#
+# Caddy terminates real HTTPS automatically (like Coolify's reverse proxy
+# + auto-certificates) and forwards plain HTTP to sshd's forwarded port,
+# which ssh -R tunnels back to the phone's Alan reverse proxy.
+
+sites.example.com {
+	reverse_proxy 127.0.0.1:8080
+}

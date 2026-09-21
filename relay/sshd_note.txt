@@ -1,0 +1,28 @@
+# sshd settings required on YOUR VPS for the Alan relay.
+# No secrets here — just the two options that must be enabled.
+#
+# Apply with: sudo ./setup.sh --remote-port 8080 --domain sites.example.com
+# or manually: edit /etc/ssh/sshd_config, then: sudo systemctl reload sshd
+#
+# 1. Allow the phone's SSH session to request REMOTE port forwarding
+#    (VPS public port -> phone). Without this, `ssh -R` / sshj remote
+#    forwarding is refused and the relay cannot go live.
+AllowTcpForwarding yes
+
+# 2. Bind the forwarded port on ALL interfaces, not just loopback,
+#    so the public internet (and Caddy) can reach it.
+#    "clientspecified" is a stricter alternative: it lets the phone request
+#    0.0.0.0 explicitly while forbidding other bind addresses.
+GatewayPorts yes
+
+# 3. Recommended keepalives so dead phone connections are reaped and the
+#    app's auto-reconnect can establish a fresh forward.
+ClientAliveInterval 30
+ClientAliveCountMax 3
+
+# Security notes:
+# - Prefer key auth + `PasswordAuthentication no` once your key works.
+# - Ports < 1024 can only be forwarded by root (or a user with extra
+#   capabilities). Use a high port (e.g. 8080) unless you connect as root.
+# - The forwarded port is public: put Caddy (or another reverse proxy with
+#   auth/TLS) in front of it; do not publish the raw port to visitors.

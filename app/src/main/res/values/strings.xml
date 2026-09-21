@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Packet Host</string>
+    <string name="notification_channel_name">Alan Foreground Service</string>
+    <string name="notification_channel_desc">Keeps your hosted sites reachable</string>
+    <string name="notification_title">Alan is running</string>
+    <string name="notification_text_sites">%d site(s) live</string>
+    <string name="notification_text_idle">Ready to host</string>
+    <string name="host_warning_title">Public Network Warning</string>
+    <string name="host_warning_body">Anything you serve through the reverse proxy becomes reachable by anyone on the same network (or the internet, if you port-forward). Do not expose sensitive files. Continue?</string>
+    <string name="quick_host_warning_title">Public Internet Warning</string>
+    <string name="quick_host_warning_body">Hosting creates a public https://*.trycloudflare.com link: anyone on the internet with the link can open this site, and traffic passes through Cloudflare. The address is random and changes on every Host. Do not expose sensitive files. Continue?</string>
+</resources>
