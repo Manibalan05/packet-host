@@ -13,7 +13,7 @@ qrcode = "4.4.0"
 jgit = "6.9.0.202403050737-r"
 slf4j = "2.0.9"
 junit = "4.13.2"
-sshj = "0.39.0"
+sshj = "0.40.0"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.13.1" }
