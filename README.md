@@ -4,7 +4,7 @@
 
 Clone a repo → tap **Run** → tap **Host** → get a free public `https://` link. That's it.
 
-> **Turn any Android phone into a public web server with free HTTPS.** Packet Host is a free Android web server app (no root, no port forwarding) that hosts static sites, Node.js, Python, and PHP apps from your phone. Share over LAN with QR, get an instant `https://*.trycloudflare.com` link via Cloudflare Tunnel, or use your own VPS relay with Caddy auto-HTTPS for a stable custom domain. If you searched for *android web server no root*, *host website from android phone*, *git clone to hosting*, *cloudflare tunnel android app*, *termux alternative web hosting*, or *localhost to public URL free HTTPS* — this is it.
+> **Turn any Android phone into a public web server with free HTTPS.** Packet Host (a.k.a. Pocket Host — the server in your pocket) is a free Android web server app (no root, no port forwarding) that hosts static sites, Node.js, Python, and PHP apps from your phone. Share over LAN with QR, get an instant `https://*.trycloudflare.com` link via Cloudflare Tunnel, or use your own VPS relay with Caddy auto-HTTPS for a stable custom domain. If you searched for *android web server no root*, *host website from android phone*, *pocket host android*, *git clone to hosting*, *cloudflare tunnel android app*, *termux alternative web hosting*, or *localhost to public URL free HTTPS* — this is it.
 
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
@@ -139,6 +139,9 @@ relay/      Caddyfile.example, setup.sh, sshd_note.txt, README.md (VPS relay)
 - No ports below 1024 without root → proxy defaults to `8080`.
 
 ## ❓ FAQ
+
+**Packet Host or Pocket Host — which is it?**
+Both. The repo is named Packet Host; many people search for it as Pocket Host (the server in your pocket). Same app — this FAQ entry exists so either spelling finds it.
 
 **Do I need root or port forwarding?**
 No. LAN uses your Wi-Fi IP, quick tunnel and VPS relay both dial *out* — nothing inbound reaches the phone.
