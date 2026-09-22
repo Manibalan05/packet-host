@@ -1,0 +1,21 @@
+---
+name: Feature request
+description: Suggest a Packet Host feature
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      placeholder: I want to host X from my phone but ...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Git import, Proxy, Quick tunnel, VPS relay, LAN/QR, UI, Other]

@@ -1,0 +1,8 @@
+# Git attributes for cleaner diffs + language stats
+*.so binary linguist-vendored
+*.keystore binary
+*.jks binary
+*.apk binary
+*.aab binary
+gradlew text eol=lf
+*.bat text eol=crlf
