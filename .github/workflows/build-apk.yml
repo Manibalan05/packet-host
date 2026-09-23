@@ -21,11 +21,13 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      # NOTE: ubuntu runners already ship the Android SDK. Do NOT use
+      # ubuntu runners ship the Android SDK at $ANDROID_HOME, but
+      # cmdline-tools is not on PATH. Do NOT use
       # android-actions/setup-android@v3 — it runs `sdkmanager tools`,
       # an obsolete package that fails with exit code 1.
       - name: Install Android SDK packages
         run: |
+          export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
           yes | sdkmanager --licenses > /dev/null || true
           yes | sdkmanager "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 

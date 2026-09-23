@@ -16,7 +16,9 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
-      - uses: android-actions/setup-android@v3
+      # cmdline-tools is not on PATH by default on ubuntu runners.
+      - name: Add sdkmanager to PATH
+        run: echo "$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
       - run: chmod +x gradlew
       - name: Unit tests
         run: ./gradlew :app:testDebugUnitTest --stacktrace
