@@ -21,13 +21,13 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android platform 36 + build tools
+      # NOTE: ubuntu runners already ship the Android SDK. Do NOT use
+      # android-actions/setup-android@v3 — it runs `sdkmanager tools`,
+      # an obsolete package that fails with exit code 1.
+      - name: Install Android SDK packages
         run: |
-          sdkmanager --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
-          sdkmanager --licenses <<< "y"
+          yes | sdkmanager --licenses > /dev/null || true
+          yes | sdkmanager "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
